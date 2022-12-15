@@ -2,6 +2,21 @@
   text-align: center;
 }
 
+
+
+.border-box {
+  display: flex;
+  height: 25rem;
+  width: 15rem;
+  border: 3.5px;
+  border-style: solid;
+  border-color: white;
+  margin: 1rem;
+  padding: .5em;
+  background-color: red;
+  border-radius: 1rem;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
