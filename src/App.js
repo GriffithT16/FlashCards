@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import CollectionContainer from "./Components/Collection/CollectionContainer";
-import CardViewer from "./Components/Card/CardViewer";
-
+import CollectionList from "./Components/Collection/CollectionList";
 function App() {
 
 
@@ -11,6 +9,7 @@ function App() {
     <div>
       <div className="border-box">
         {/* <CardViewer /> */}
+        <CollectionList />
       </div>
     </div>
   );

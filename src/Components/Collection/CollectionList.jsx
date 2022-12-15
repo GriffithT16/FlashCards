@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import "./App.css";
 
 
 
-export default function CollectionList(props) {
+function CollectionList(props) {
     const [collectionID, setCollectionId] = useState([]);
     useEffect(() => {
         fetchCollection();
@@ -18,7 +18,17 @@ export default function CollectionList(props) {
 
     return (
         <div className="border-box">
-
+            <h1>View Collections</h1>
+            <div>
+                {props.data.map((el) => {
+                    return (
+                        <div className="border-box">
+                            <h1>{el.id}</h1>
+                            <h1>{el.title}</h1>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
 
     )
@@ -30,3 +40,4 @@ export default function CollectionList(props) {
 
     // )
 }
+export default CollectionList();
