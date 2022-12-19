@@ -2,7 +2,18 @@
   text-align: center;
 }
 
-
+.border-box-card {
+  display: flex;
+  height: 10rem;
+  width: 30rem;
+  border: 3.5px;
+  border-style: solid;
+  border-color: white;
+  margin: 1rem;
+  padding: .5em;
+  background-color: green;
+  border-radius: 1rem;
+}
 
 .border-box {
   display: flex;

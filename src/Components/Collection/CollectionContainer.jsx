@@ -1,22 +1,22 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 
 
-// const CollectionContainer = (props) => {
-//   const [collections, setCollections] = useState([]);
+const CollectionContainer = (props) => {
+  const [collections, setCollections] = useState([]);
 
-//   useEffect(() => {
-//     fetchCollections();
-//   }, []);
+  useEffect(() => {
+    fetchCollections();
+  }, []);
 
-//   const fetchCollections = async () => {
-//     let response = await axios.get("http://127.0.0.1:8000/api/collections/");
-//     console.log(response.data.title);
-//     debugger;
-//     setCollections(response.data);
-//   };
-// }
+  const fetchCollections = async () => {
+    let response = await axios.get("http://127.0.0.1:8000/api/collections/");
+    console.log(response.data.title);
+    debugger;
+    setCollections(response.data);
+  };
+}
 
 
 
-// export default CollectionContainer;
+export default CollectionContainer;

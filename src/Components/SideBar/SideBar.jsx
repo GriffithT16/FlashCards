@@ -1,6 +1,6 @@
 import React from "react";
 import CollectionList from "../Collection/CollectionList";
-import CardViewer from "../Card/CardViewer";
+
 
 
 
