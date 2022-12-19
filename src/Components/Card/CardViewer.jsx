@@ -31,15 +31,16 @@ export default function CardViewer(props) {
             setIndex(0)
         }
     }
-    // function displayAnswer() {
-    //     let answer = ({cards[index]?.definition})
-        
-    // }
+    const displayAnswer = () => {
+        let answer = (cards[index].definition)
+        console.log(answer)
+        return (answer)
+    }
 
     return (
         <div style={{height:"15rem","width":"25rem","borderStyle":"solid"}}>
-            {cards[index]?.word}
-            <button>Answer</button>            
+            {cards[index]?.word}           
+            <button type='submit' onClick={displayAnswer}>Answer</button>            
             <button type='submit' onClick={handleNext}>Next</button>
             <button type='submit' onClick={handlePrev}>Previous</button>
             {/* <div>
