@@ -34,25 +34,18 @@ export default function CardViewer(props) {
     const displayAnswer = () => {
         let answer = (cards[index].definition)
         console.log(answer)
-        return (
-            <div style={{height:"15rem","width":"25rem","borderStyle":"solid"}}>
-                {answer}
-                         
-                <button type='submit' onClick={displayAnswer}>Answer</button>            
-                <button type='submit' onClick={handleNext}>Next</button>
-                <button type='submit' onClick={handlePrev}>Previous</button>
-
-            </div>
-        )
+        alert (answer)
     }
 
     return (
-        <div style={{height:"15rem","width":"25rem","borderStyle":"solid"}}>
+        <div style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
             {cards[index]?.word} 
-                     
-            <button type='submit' onClick={displayAnswer}>Answer</button>            
-            <button type='submit' onClick={handleNext}>Next</button>
-            <button type='submit' onClick={handlePrev}>Previous</button>
+            <div style={{padding:".5em"}}>
+                <button style={{margin:".5em"}} type='submit' onClick={displayAnswer}>Answer</button>            
+                <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
+                <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
+            </div>        
+
 
         </div>
 
