@@ -5,8 +5,6 @@ import SideBar from "./Components/SideBar/SideBar";
 import CardViewer from "./Components/Card/CardViewer";
 import Card from "./Components/Card/Card";
 
-
-
 function App() {
   const [collections, setCollections] = useState([]);
   const [selectedCollection, setSelectedCollection] = useState(1);
@@ -17,20 +15,22 @@ function App() {
   }, []);
 
   const fetchCollections = async () => {
-
     let response = await axios.get("http://127.0.0.1:8000/api/collections/");
-    console.log(response.data)
-   
-    setCollections(response.data);
-  }
+    console.log(response.data);
 
-  
+    setCollections(response.data);
+  };
 
   return (
     <div>
-      <SideBar collections={collections} setSelectedCollection={setSelectedCollection}/>
-      <CardViewer collections={collections} selectedCollection={selectedCollection}/>
-      {/* <Card collections={collections} cards={cards} /> */}
+      <SideBar
+        collections={collections}
+        setSelectedCollection={setSelectedCollection}
+      />
+      <CardViewer
+        collections={collections}
+        selectedCollection={selectedCollection}
+      />
     </div>
   );
 }

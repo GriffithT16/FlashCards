@@ -38,50 +38,16 @@ export default function CardViewer(props) {
     };
     return (
         <>
-            <div style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
+            <h1>{cards[index]?.id}/{cards.length}</h1>
+            <div onClick={handleButtonClick} style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
                 <div>{firstIsTrue ? cards[index]?.definition : cards[index]?.word}</div>
-                <div style={{padding:".5em"}}>
-                    <button style={{margin:".5em"}} type='submit' onClick={handleButtonClick}>Flip Card</button>            
-                    <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
-                    <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
-                </div>
-            </div>     
+            </div>
+            <div style={{padding:".5em"}}>                                
+                <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
+                <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
+            </div>
+                 
         </>
     )
-    // const displayAnswer = () => {
-    //     return (
-    //         <div style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
-    //             {cards[index]?.definition} 
-    //             <div style={{padding:".5em"}}>
-    //                 <button style={{margin:".5em"}} type='submit' onClick={displayQuestion}>Question</button>            
-    //                 <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
-    //                 <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
-    //             </div>     
-    //         </div>
-    //     )
-    // }
-    // const displayQuestion = () => {
-    //     return (
-    //         <div style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
-    //             {cards[index]?.word} 
-    //             <div style={{padding:".5em"}}>
-    //                 <button style={{margin:".5em"}} type='submit' onClick={handleButtonClick}>Answer</button>            
-    //                 <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
-    //                 <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
-    //             </div>        
-    //         </div>
-    //     )
-    // }
 
-    // return (
-    //     <div style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
-    //         {cards[index]?.word} 
-    //         <div style={{padding:".5em"}}>
-    //             <button style={{margin:".5em"}} type='submit' onClick={handleButtonClick}>Answer</button>            
-    //             <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
-    //             <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
-    //         </div>        
-    //     </div>
-
-    // )
 }
