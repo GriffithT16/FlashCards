@@ -46,7 +46,7 @@ function App() {
             <AddNewCard
               selectedCollection={selectedCollection} fetchCollections={fetchCollections}
             />
-            <button onClick={handleButtonClick}>Back to Collections</button>
+            <button style={{margin:"1em", color:"purple", height:"2rem", width:"8.5rem"}} onClick={handleButtonClick}>Back to Collections</button>
             </>  
         ) }  
       </div>

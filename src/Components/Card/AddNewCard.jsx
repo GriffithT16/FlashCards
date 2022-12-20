@@ -34,7 +34,7 @@ const AddNewCard = (props) => {
                 <label>Definition</label>
                 <input type='text' value={definition} onChange={(event) => setDefinition(event.target.value)} />
             </div>
-            <button type='submit'>Create Card</button>
+            <button type='submit' style={{margin:"1em", color:"blue", height:"2rem", width:"8rem"}}>Create Card</button>
         </form>
 
      );
