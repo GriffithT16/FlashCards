@@ -1,30 +1,23 @@
-
 import React, { useState } from "react";
 import CollectionTab from "./CollectionTab";
 
-
-
-
 function CollectionList(props) {
-
-
-
   return (
     <div className="">
       <h1>Collections</h1>
       {props.collections && (
         <div>
           {props.collections.map((entry) => {
-            return (     
-                <CollectionTab entry={entry} setSelectedCollection = {props.setSelectedCollection} />
-       
+            return (
+              <CollectionTab
+                entry={entry}
+                setSelectedCollection={props.setSelectedCollection}
+              />
             );
           })}
         </div>
       )}
     </div>
   );
-
-
 }
 export default CollectionList;
