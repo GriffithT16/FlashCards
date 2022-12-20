@@ -20,6 +20,7 @@ const AddNewCard = (props) => {
         console.log(newCard)
         let response = await axios.post(`http://127.0.0.1:8000/api/collections/${props.selectedCollection}/cards/`, newCard);
         if(response.status === 201){
+            props.fetchCollections()
             return true;
         }
     }

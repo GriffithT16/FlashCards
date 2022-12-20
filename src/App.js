@@ -9,7 +9,7 @@ function App() {
   const [collections, setCollections] = useState([]);
   const [selectedCollection, setSelectedCollection] = useState(1);
   const [firstIsTrue, setFirstIsTrue] = useState(true);
-  // const [cards, setCards] = useState();
+ 
 
   useEffect(() => {
     fetchCollections();
@@ -25,10 +25,6 @@ function App() {
     setFirstIsTrue(!firstIsTrue);
   };
 
-  // function createNewCard() {
-  //   <AddNewCard />
-  //   // document.getElementById(AddNewCard).style.display = "block";
-  // }
 
   return (
     <div>
@@ -48,7 +44,7 @@ function App() {
         ) : (
           <>
             <AddNewCard
-              selectedCollection={selectedCollection}
+              selectedCollection={selectedCollection} fetchCollections={fetchCollections}
             />
             <button onClick={handleButtonClick}>Back to Collections</button>
             </>  
