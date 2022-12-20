@@ -4,6 +4,7 @@ import axios from "axios";
 import SideBar from "./Components/SideBar/SideBar";
 import CardViewer from "./Components/Card/CardViewer";
 import AddNewCard from "./Components/Card/AddNewCard";
+import Header from "./Components/Header/Header";
 
 function App() {
   const [collections, setCollections] = useState([]);
@@ -29,6 +30,7 @@ function App() {
       <div>
         {firstIsTrue ? (
           <>
+            <Header />
             <SideBar
               collections={collections}
               setSelectedCollection={setSelectedCollection}
