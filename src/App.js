@@ -9,7 +9,6 @@ function App() {
   const [collections, setCollections] = useState([]);
   const [selectedCollection, setSelectedCollection] = useState(1);
   const [firstIsTrue, setFirstIsTrue] = useState(true);
- 
 
   useEffect(() => {
     fetchCollections();
@@ -25,7 +24,6 @@ function App() {
     setFirstIsTrue(!firstIsTrue);
   };
 
-
   return (
     <div>
       <div>
@@ -39,19 +37,40 @@ function App() {
               collections={collections}
               selectedCollection={selectedCollection}
             />
-            <button onClick={handleButtonClick}>Create New Card</button>
-          </> 
+            <button
+              style={{
+                margin: "1em",
+                color: "black",
+                height: "2rem",
+                width: "8rem",
+                backgroundColor: "red",
+                borderColor: "whitesmoke",
+              }}
+              onClick={handleButtonClick}
+            >
+              Create New Card
+            </button>
+          </>
         ) : (
           <>
             <AddNewCard
-              selectedCollection={selectedCollection} fetchCollections={fetchCollections}
+              selectedCollection={selectedCollection}
+              fetchCollections={fetchCollections}
             />
-            <button style={{margin:"1em", color:"purple", height:"2rem", width:"8.5rem"}} onClick={handleButtonClick}>Back to Collections</button>
-            </>  
-        ) }  
+            <button
+              style={{
+                margin: "1em",
+                color: "purple",
+                height: "2rem",
+                width: "8.5rem",
+              }}
+              onClick={handleButtonClick}
+            >
+              Back to Collections
+            </button>
+          </>
+        )}
       </div>
-
-
     </div>
   );
 }

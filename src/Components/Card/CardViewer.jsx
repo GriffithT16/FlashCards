@@ -39,12 +39,12 @@ export default function CardViewer(props) {
     return (
         <>
             <h1>{index + 1}/{cards.length}</h1>
-            <div onClick={handleButtonClick} style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
+            <div onClick={handleButtonClick} style={{height:"8rem", width:"18rem", borderStyle:"solid", borderRadius:"1em", padding:"1em", backgroundColor:"red", color:"white", borderColor:"whitesmoke"}}>
                 <div>{firstIsTrue ? cards[index]?.definition : cards[index]?.word}</div>
             </div>
             <div style={{padding:".5em"}}>                                
-                <button style={{margin:".5em"}} type='submit' onClick={handlePrev}>Previous</button>
-                <button style={{margin:".5em"}} type='submit' onClick={handleNext}>Next</button>
+                <button style={{margin: "1em", color: "black", height: "2rem", width: "8rem", backgroundColor: "red", borderColor: "whitesmoke"}} type='submit' onClick={handlePrev}>Previous</button>
+                <button style={{margin: "1em", color: "black", height: "2rem", width: "8rem", backgroundColor: "red", borderColor: "whitesmoke"}} type='submit' onClick={handleNext}>Next</button>
             </div>
                  
         </>
