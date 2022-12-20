@@ -40,10 +40,11 @@ function App() {
             <button
               style={{
                 margin: "1em",
-                color: "black",
+                marginLeft: "7.5em",
+                color: "white",
                 height: "2rem",
                 width: "8rem",
-                backgroundColor: "red",
+                backgroundColor: "darkred",
                 borderColor: "whitesmoke",
               }}
               onClick={handleButtonClick}
