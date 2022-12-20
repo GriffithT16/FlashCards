@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
 
@@ -8,6 +8,9 @@ const AddNewCard = (props) => {
     const [word, setWord] = useState('');
     const [definition, setDefinition] = useState('');
 
+    useEffect(() => {
+        ;
+      }, [props.selectedCollection]);
 
     async function handleSubmit(event) {
         event.preventDefault();
@@ -17,7 +20,7 @@ const AddNewCard = (props) => {
         };
         // debugger;
         console.log(newCard)
-        let response = await axios.post('http://127.0.0.1:8000/api/collections/${props.selectedCollection}/cards/', newCard);
+        let response = await axios.post(`http://127.0.0.1:8000/api/collections/${props.selectedCollection}/cards/`, newCard);
         if(response.status === 201){
             return true;
         }
@@ -32,6 +35,7 @@ const AddNewCard = (props) => {
                 <label>Definition</label>
                 <input type='text' value={definition} onChange={(event) => setDefinition(event.target.value)} />
             </div>
+            <button type='submit'>Create Card</button>
         </form>
 
      );

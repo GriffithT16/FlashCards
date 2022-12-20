@@ -3,12 +3,12 @@ import "./App.css";
 import axios from "axios";
 import SideBar from "./Components/SideBar/SideBar";
 import CardViewer from "./Components/Card/CardViewer";
-import Card from "./Components/Card/Card";
+import AddNewCard from "./Components/Card/AddNewCard";
 
 function App() {
   const [collections, setCollections] = useState([]);
   const [selectedCollection, setSelectedCollection] = useState(1);
-  const [cards, setCards] = useState();
+  // const [cards, setCards] = useState();
 
   useEffect(() => {
     fetchCollections();
@@ -21,6 +21,10 @@ function App() {
     setCollections(response.data);
   };
 
+  function createNewCard () {
+    document.getElementById(AddNewCard).style.display = 'block';
+  }
+
   return (
     <div>
       <SideBar
@@ -31,6 +35,13 @@ function App() {
         collections={collections}
         selectedCollection={selectedCollection}
       />
+      <button class="openButton" onClick={createNewCard}>Create New Card</button>
+      {/* <button>
+        <AddNewCard
+          collection={collections}
+          selectedCollection={selectedCollection}
+        />
+      </button> */}
     </div>
   );
 }
