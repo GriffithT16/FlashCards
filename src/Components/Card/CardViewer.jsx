@@ -9,7 +9,7 @@ export default function CardViewer(props) {
     const [cards, setCards] = useState([]);
     const [index,setIndex] = useState(0);
     const [firstIsTrue, setFirstIsTrue] = useState(false);
-
+    
     useEffect(() => {
         fetchCards();
       }, [props.selectedCollection]);
@@ -38,7 +38,7 @@ export default function CardViewer(props) {
     };
     return (
         <>
-            <h1>{cards[index]?.id}/{cards.length}</h1>
+            <h1>{index + 1}/{cards.length}</h1>
             <div onClick={handleButtonClick} style={{height:"15rem", width:"25rem", borderStyle:"solid", borderRadius:"1em", padding:"1em"}}>
                 <div>{firstIsTrue ? cards[index]?.definition : cards[index]?.word}</div>
             </div>

@@ -1,18 +1,23 @@
-import CardViewer from "../Card/CardViewer";
-import React, { useState, useEffect } from "react";
+
+import React, { useState } from "react";
+import CollectionTab from "./CollectionTab";
+
+
+
 
 function CollectionList(props) {
+
+
+
   return (
     <div className="">
       <h1>Collections</h1>
       {props.collections && (
         <div>
           {props.collections.map((entry) => {
-            return (             
-                <div className="border-box" onClick={() => props.setSelectedCollection(entry.id)} >
-                  <h1>{entry.id} - </h1>
-                  <h1> {entry.title}</h1>
-                </div>           
+            return (     
+                <CollectionTab entry={entry} setSelectedCollection = {props.setSelectedCollection} />
+       
             );
           })}
         </div>
