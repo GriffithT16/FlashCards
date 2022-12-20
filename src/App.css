@@ -9,13 +9,13 @@
 .border-box-card {
   display: flex;
   height: 10rem;
-  width: 30rem;
+  width: 20rem;
   border: 3.5px;
   border-style: solid;
   border-color: white;
   margin: 1rem;
   padding: .5em;
-  background-color: green;
+  background-color: darkred;
   border-radius: 1rem;
 }
 
