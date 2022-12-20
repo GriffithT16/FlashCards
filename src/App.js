@@ -21,8 +21,9 @@ function App() {
     setCollections(response.data);
   };
 
-  function createNewCard () {
-    document.getElementById(AddNewCard).style.display = 'block';
+  function createNewCard() {
+    <AddNewCard />
+    // document.getElementById(AddNewCard).style.display = "block";
   }
 
   return (
@@ -35,13 +36,14 @@ function App() {
         collections={collections}
         selectedCollection={selectedCollection}
       />
-      <button class="openButton" onClick={createNewCard}>Create New Card</button>
-      {/* <button>
-        <AddNewCard
-          collection={collections}
-          selectedCollection={selectedCollection}
-        />
-      </button> */}
+      <button class="openButton" onClick={createNewCard}>
+        Create New Card
+      </button>
+
+      <AddNewCard
+        collection={collections}
+        selectedCollection={selectedCollection}
+      />
     </div>
   );
 }
