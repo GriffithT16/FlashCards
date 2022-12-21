@@ -5,6 +5,7 @@ import SideBar from "./Components/SideBar/SideBar";
 import CardViewer from "./Components/Card/CardViewer";
 import AddNewCard from "./Components/Card/AddNewCard";
 import Header from "./Components/Header/Header";
+import DeleteCard from "./Components/Card/DeleteCard";
 
 function App() {
   const [collections, setCollections] = useState([]);
@@ -39,6 +40,7 @@ function App() {
               collections={collections}
               selectedCollection={selectedCollection}
             />
+            {/* <DeleteCard selectedCollection={selectedCollection} collections={collections} /> */}
             <button
               style={{
                 margin: "1em",
@@ -67,7 +69,7 @@ function App() {
                 height: "2rem",
                 width: "8.5rem",
                 backgroundColor: "red",
-                borderColor: "whitesmoke"
+                borderColor: "whitesmoke",
               }}
               onClick={handleButtonClick}
             >

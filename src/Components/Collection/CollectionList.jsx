@@ -3,7 +3,7 @@ import CollectionTab from "./CollectionTab";
 
 function CollectionList(props) {
   return (
-    <div className="">
+    <div>
       <h1>Collections</h1>
       {props.collections && (
         <div>
