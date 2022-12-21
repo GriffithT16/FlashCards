@@ -15,7 +15,7 @@ const DeleteCard = (props) => {
         }
 
 
-
+//This deleted the second card of the first collection. I must have props.cards.id wrong.
 
 
 

@@ -40,7 +40,10 @@ function App() {
               collections={collections}
               selectedCollection={selectedCollection}
             />
-            {/* <DeleteCard selectedCollection={selectedCollection} collections={collections} /> */}
+            <DeleteCard
+              selectedCollection={selectedCollection}
+              collections={collections}
+            />
             <button
               style={{
                 margin: "1em",
